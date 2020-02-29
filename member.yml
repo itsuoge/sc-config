@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: member
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sc_member?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+server:
+  port: 8000
+eureka:
+  client:
+    service-url:
+      #在客户端定义多个Eureka注册中心-客户端负载均衡
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/
